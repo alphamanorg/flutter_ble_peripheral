@@ -89,15 +89,13 @@ class FlutterBlePeripheral {
       for (final key in json.keys) {
         parameters['set$key'] = json[key];
       }
-      parameters.addAll(advertiseData.toJson());
     }
 
     if (advertiseResponseData != null) {
-      final json = advertiseData.toJson();
+      final json = advertiseResponseData.toJson();
       for (final key in json.keys) {
         parameters['response$key'] = json[key];
       }
-      parameters.addAll(advertiseData.toJson());
     }
 
     final response =
